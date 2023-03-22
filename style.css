@@ -48,10 +48,7 @@ main {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     display: flex;
-    width: 100vw;
-    height: 100vh;
-    flex-direction: column;
-    border-radius: 0;
+    width: 600px;
 
 }
 
@@ -66,13 +63,12 @@ main {
     background: linear-gradient(var(--gradient-loyal-100), var(--gradient-violet));
     justify-items: center;
     align-items: center;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    border-radius: 15px;
 }
 
 .result h1 {
     font-size: 18px;
-    color: var(--neutral-lavender-100);
+    color: var(--neutral-lavender-100)
 }
 
 .score {
@@ -209,17 +205,33 @@ button:hover {
 }
 
 
-
-@media (min-width: 375px) {
+@media (max-width: 450px) {
     .contanier {
-        width: 600px;
-        flex-direction: row;
-        height: auto;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        border-radius: 0;
     }
 
     .result {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
 
-        border-radius: 15px;
+    }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+
+    /* CSS */
+    .contanier {
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        border-radius: 0;
+    }
+
+    .result {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
 
     }
 }
