@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,800;1,700&display=swap');
+
+:root {
+    --light-red: 0, 100%, 67%;
+    --orangy-yellow: 39, 100%, 56%;
+    --green-teal: 166, 100%, 37%;
+    --cobalt-blue: 234, 85%, 45%;
+    --primary-light-red: hsl(0, 100%, 67%);
+    --primary-orangy-yellow: hsl(39, 100%, 56%);
+    --primary-green-teal: hsl(166, 100%, 37%);
+    --primary-cobalt-blue: hsl(234, 85%, 45%);
+
+    --gradient-slate-100: hsl(252, 100%, 67%);
+    --gradient-loyal-100: hsl(241, 81%, 54%);
+    --gradient-violet: hsla(256, 72%, 46%, 1);
+    --gradient-persisan: hsla(241, 72%, 46%, 0);
+
+    --neutral-pure: hsl(0, 0%, 100%);
+    --neutral-pale: hsl(221, 100%, 96%);
+    --neutral-lavender-100: hsl(241, 100%, 89%);
+    --gray-100: hsla(224, 30%, 27%, .5);
+    --neutral-gray-900: hsl(224, 30%, 27%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--neutral-pale);
+
+}
+
+.contanier {
+    background-color: var(--neutral-pure);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    width: 600px;
+
+}
+
+.result {
+    color: var(--neutral-pure);
+    flex: 1;
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    text-align: center;
+    row-gap: 30px;
+    background: linear-gradient(var(--gradient-loyal-100), var(--gradient-violet));
+    justify-items: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.result h1 {
+    font-size: 18px;
+    color: var(--neutral-lavender-100)
+}
+
+.score {
+
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, var(--gradient-violet), var(--gradient-persisan));
+
+}
+
+.score h2 {
+    margin-top: 30px;
+    font-size: 45px;
+    font-weight: 800;
+}
+
+.score .total {
+    color: var(--neutral-lavender-100);
+    font-size: 12px;
+}
+
+
+
+
+.summary {
+    flex: 1;
+}
+
+.content p {
+
+    color: var(--neutral-lavender-100);
+    font-size: .8rem;
+    margin-bottom: 2rem;
+}
+
+.content span {
+    font-size: 25px;
+    display: block;
+    margin-bottom: 15px;
+    color: var(--neutral-pure);
+}
+
+
+
+.summary {
+    /* text-align: center; */
+    padding: 2rem 1.3rem;
+    /* display: grid; */
+    /* grid-template-rows: repeat(3, auto); */
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.summary h2 {
+    font-size: 18px;
+    margin-bottom: -8px;
+}
+
+.cards {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.card {
+    font-weight: 800;
+    padding: 0.7rem .5rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.card div {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+
+}
+
+.card .obtained {
+    color: black;
+
+}
+
+.card .total {
+    color: var(--gray-100);
+}
+
+.card:first-child {
+    background-color: hsla(var(--light-red), .09);
+    color: var(--primary-light-red);
+
+}
+
+.card:nth-child(2) {
+    background-color: hsla(var(--orangy-yellow), .09);
+    color: var(--primary-orangy-yellow);
+
+}
+
+.card:nth-child(3) {
+    background-color: hsla(var(--green-teal), .09);
+    color: var(--primary-green-teal);
+
+}
+
+.card:nth-child(4) {
+    background-color: hsla(var(--cobalt-blue), .09);
+    color: var(--primary-cobalt-blue);
+
+}
+
+button {
+    padding: 1rem;
+    border-radius: 30px;
+    font-size: 15px;
+    background: var(--neutral-gray-900);
+    color: var(--neutral-pure);
+    font-weight: 700;
+    letter-spacing: 1px;
+    outline: none;
+    border-color: transparent;
+}
+
+button:active,
+button:hover {
+    background: linear-gradient(var(--gradient-loyal-100), var(--gradient-violet));
+
+}
+
+@media (max-width: 375px) {
+    .contanier {
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        border-radius: 0;
+    }
+
+    .result {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+
+    }
+}
